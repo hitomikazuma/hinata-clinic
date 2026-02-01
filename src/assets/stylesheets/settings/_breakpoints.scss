@@ -1,0 +1,54 @@
+@use 'sass:map';
+
+// ブレイクポイント設定（汎用）
+// ポリシーはプロジェクトで選択:
+// - モバイルファースト: mq-up (min-width) を使用
+// - デスクトップファースト: mq-down (max-width) を使用
+
+// ブレイクポイント値の定義（px）
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1600px,
+  '1200': 1200px,
+  '1550': 1550px,
+);
+
+// 特定の範囲のみに適用（min〜max）
+// 例）@include mq-range(md, lg) → 768px〜991.9px
+@mixin mq-range($bp-from, $bp-to) {
+  @if map.has-key($breakpoints, $bp-from) and map.has-key($breakpoints, $bp-to) {
+    $min: map.get($breakpoints, $bp-from);
+    $max: map.get($breakpoints, $bp-to) - 0.1px;
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @error "指定されたブレイクポイントが定義されていません。利用可能なブレイクポイント: #{map.keys($breakpoints)}";
+  }
+}
+
+// デスクトップファースト（max-width）
+@mixin mq-down($bp) {
+  @if map.has-key($breakpoints, $bp) {
+    $max: map.get($breakpoints, $bp) - 0.1px;
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @error "指定されたブレイクポイント '#{$bp}' は定義されていません。利用可能なブレイクポイント: #{map.keys($breakpoints)}";
+  }
+}
+
+// モバイルファースト（min-width）
+@mixin mq-up($bp) {
+  @if map.has-key($breakpoints, $bp) {
+    $min: map.get($breakpoints, $bp);
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @error "指定されたブレイクポイント '#{$bp}' は定義されていません。利用可能なブレイクポイント: #{map.keys($breakpoints)}";
+  }
+}

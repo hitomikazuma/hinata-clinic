@@ -1,0 +1,108 @@
+@use '../settings/index' as *;
+
+.header {
+  background: #f2f5f6;
+  height: var(--header-height);
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+  }
+  .headerLogoArea {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 405px;
+    height: 160px;
+  }
+  .headerLogoBg {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .headerLogo {
+    position: relative;
+    z-index: 1;
+    padding-left: 50px;
+    img {
+      width: 257px;
+      height: auto;
+      transform: translateY(-10px);
+    }
+  }
+  .headerInfoArea {
+    display: flex;
+    align-items: center;
+  }
+  .headerNav {
+    margin-right: 30px;
+    padding-right: 30px;
+    border-right: 1px dashed rgba(11, 158, 206, 0.3);
+  }
+  .headerNavList {
+    display: flex;
+    column-gap: 30px;
+    &:last-child {
+      margin-top: 15px;
+    }
+  }
+  .headerNavItem {
+    a {
+      letter-spacing: 0.1em;
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
+  .headerContact {
+    display: flex;
+    column-gap: 20px;
+    align-items: baseline;
+  }
+  .headerContactText {
+    line-height: 1;
+    letter-spacing: 0.1em;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  .headerContactNumber {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    column-gap: 4px;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--primary-color);
+    img {
+      aspect-ratio: 1 / 1;
+      width: 20px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: rgba(11, 158, 206, 0.1);
+    }
+  }
+  .headerTime {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-top: 20px;
+  }
+  .headerTimeText {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+}

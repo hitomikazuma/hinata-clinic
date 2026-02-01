@@ -1,0 +1,37 @@
+@use 'sass:math';
+@use 'sass:meta';
+@use './variable' as v;
+
+// ------------------------------
+// Viewport utility functions
+// ------------------------------
+
+// デザイン基準幅に対して、最大値 $max-size を上限に
+// min($max-size, calc(100vw * $max-size / $design-viewport)) を返す
+// 例: width: vw-min(734px, 1512px) → min(734px, calc(100vw * 734 / 1512))
+@function vw-min($max-size, $design-viewport: v.$design-viewport) {
+  // px前提: pxで渡されることを想定し、単位除去のみ計算として実行
+  $max: $max-size;
+  @if meta.type-of($max-size) == number {
+    $max: math.div($max-size, 1px);
+  }
+  // $design-viewport が Sass 数値(px)なら単位除去、CSS変数など非数値ならそのまま使う
+  @if meta.type-of($design-viewport) == number {
+    $vp: math.div($design-viewport, 1px);
+    @return min(#{$max-size}, calc(100vw * #{$max} / #{$vp}));
+  }
+  // 非数値（例: var(--base-width)）は、単位なしの数値を返す想定で直接 calc に埋め込む
+  @return min(#{$max-size}, calc(100vw * #{$max} / #{$design-viewport}));
+}
+
+// ------------------------------
+// Typography utility functions
+// ------------------------------
+
+// Photoshopの行送り（固定値）からCSSのline-height（倍率）を計算
+// $leading: Photoshopの行送り値（pt/px）
+// $font-size: フォントサイズ（pt/px）
+// 例: line-height: lh(70, 40) → 1.75
+@function lh($leading, $font-size) {
+  @return math.div($leading, $font-size);
+}

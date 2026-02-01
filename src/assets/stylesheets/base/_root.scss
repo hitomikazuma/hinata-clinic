@@ -1,0 +1,27 @@
+@use '../settings/breakpoints' as *;
+
+:root {
+  --debug: false;
+
+  --window-width-large: 1390px;
+  --window-width-medium: 1090px;
+  --window-width-small: 990px;
+
+  --inner-padding-inline: 100px;
+  --base-padding-inline: 10px;
+
+  // フォント色
+  --font-color: #252525;
+
+  //
+  --primary-color: #0b9ece;
+  --secondary-color: #ee8418;
+
+  // グレー系カラー
+  --gray-color: #e6e6e6;
+
+  --header-height: 160px;
+  @include mq-down(md) {
+    --header-height: 80px;
+  }
+}

@@ -1,0 +1,33 @@
+// フォント定義（@fonts エイリアスで wp/fonts/ を参照）
+
+@font-face {
+  font-family: 'Shippori Mincho';
+  src: url('@fonts/ShipporiMincho-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shippori Mincho';
+  src: url('@fonts/ShipporiMincho-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shippori Mincho';
+  src: url('@fonts/ShipporiMincho-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sorts Mill Goudy';
+  src: url('@fonts/SortsMillGoudy-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

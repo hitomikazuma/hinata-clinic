@@ -1,0 +1,37 @@
+@use '../settings/index' as *;
+
+.home {
+  .visual {
+    height: calc(100vh - var(--header-height));
+    padding-top: 90px;
+    background: #f2f5f6;
+    .visualItem {
+      position: relative;
+      width: 80%;
+      margin-inline: auto;
+    }
+    .visualTextWrap {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: -45px;
+      transform: translateY(-50%);
+      width: 100%;
+      height: fit-content;
+    }
+    .visualTitle {
+      span {
+        display: block;
+        letter-spacing: 0.1em;
+        font-size: 34px;
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+    }
+    .visualDescription {
+      letter-spacing: 0.1em;
+      font-size: 22px;
+      margin-top: 30px;
+    }
+  }
+}
