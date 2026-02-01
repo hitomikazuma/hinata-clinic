@@ -1,9 +1,54 @@
 @use '../settings/index' as *;
 
+.fixedMenu {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+.fixedMenuButton {
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    padding-block: 24px;
+    padding-inline: 12px;
+    text-align: center;
+    line-height: lh(20, 15);
+    letter-spacing: 0.15em;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    border-radius: 10px 0 0 10px;
+  }
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+  &:first-child {
+    a {
+      background: var(--secondary-color);
+    }
+  }
+  &:nth-child(2) {
+    a {
+      background: var(--primary-color);
+    }
+  }
+  &:last-child {
+    a {
+      color: var(--primary-color);
+      background: white;
+    }
+  }
+}
+
 .header {
   background: #f2f5f6;
   height: var(--header-height);
-  .inner {
+  .headerInner {
     display: flex;
     justify-content: space-between;
     align-items: center;

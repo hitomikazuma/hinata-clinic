@@ -12,8 +12,30 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
+
+  <div class="fixedMenu">
+    <p class="fixedMenuButton">
+      <a href="#">
+        <img src="<?php echo esc_url(get_theme_file_uri('images/icon_calendar.png')); ?>" width="29" height="31" alt="アイコン ご予約はこちらから">
+        ご予約は<br>こちらから
+      </a>
+    </p>
+    <p class="fixedMenuButton">
+      <a href="#">
+        <img src="<?php echo esc_url(get_theme_file_uri('images/icon_interview.png')); ?>" width="32" height="32" alt="アイコン 事前Web問診">
+        事前<br>Web問診
+      </a>
+    </p>
+    <p class="fixedMenuButton">
+      <a href="#">
+        <img src="<?php echo esc_url(get_theme_file_uri('images/icon_time.png')); ?>" width="20" height="20" alt="アイコン 診察時間">
+        診察時間
+      </a>
+    </p>
+  </div>
+
   <header class="header">
-    <div class="inner">
+    <div class="headerInner">
       <div class="headerLogoArea">
         <img class="headerLogoBg" src="<?php echo esc_url(get_theme_file_uri('images/logo_bg.png')); ?>" alt="Hinata Clinic">
         <h1 class="headerLogo">

@@ -8,25 +8,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-block: 20px;
-    padding-inline: 40px;
+    column-gap: 14px;
     line-height: 1;
-    font-size: 16px;
+    letter-spacing: 0.1em;
+    font-size: 18px;
     background: white;
     border-radius: 27.5px;
-    @include mq-down(md) {
-      font-size: 13px;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      z-index: 1;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      width: 7px;
-      height: 15px;
-      background: url('@images/button_arrow.png') no-repeat center center / cover;
+    svg {
+      aspect-ratio: 1 / 1;
+      width: 30px;
     }
   }
 }
