@@ -1,6 +1,6 @@
 @use '../settings/index' as *;
 
-.button {
+.textButton {
   width: fit-content;
   height: fit-content;
   a {
@@ -15,6 +15,33 @@
     background: white;
     border-radius: 27.5px;
     svg {
+      aspect-ratio: 1 / 1;
+      width: 30px;
+    }
+  }
+}
+
+.button {
+  a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 14px;
+    width: 260px;
+    height: 70px;
+    margin-inline: auto;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    color: white;
+    background: var(--primary-color);
+    border-radius: 35px;
+    svg {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
       aspect-ratio: 1 / 1;
       width: 30px;
     }

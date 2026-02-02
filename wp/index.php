@@ -79,7 +79,7 @@
           <span class="headingJa">お知らせ</span>
           <span class="headingEn">News</span>
         </h2>
-        <p class="button">
+        <p class="textButton">
           <a href="#">
             一覧を見る
             <svg
@@ -121,7 +121,101 @@
   </section>
 
   <section class="about">
+    <div>
+      <img class="aboutImg aboutImg1" src="<?php echo esc_url(get_theme_file_uri('images/top/about_1.png')); ?>" width="200" height="280" alt="">
+      <img class="aboutImg aboutImg2" src="<?php echo esc_url(get_theme_file_uri('images/top/about_2.png')); ?>" width="275" height="380" alt="">
+    </div>
+    <div>
+      <h2 class="heading">
+        <span class="headingJa">
+          総合診療×<br>予防・美容医療の<br>総合内科クリニック
+        </span>
+        <span class="headingEn">About us</span>
+      </h2>
+      <div class="aboutTextWrap">
+        <p class="aboutText">
+          奄美市名瀬末広町にある陽向クリニック。
+          <br>
+          内科・小児科から在宅医療、
+          <br>
+          そして自分らしくあるための美容医療まで。
+        </p>
+        <p class="aboutText">
+          どんなことでも気軽に相談できる
+          <br>
+          「陽だまり」のような場所を目指しています。
+        </p>
+      </div>
+      <p class="button">
+        <a href="#">
+          くわしく見る
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="28px" height="28px">
+            <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+              d="M14.000,0.000 C21.732,0.000 28.000,6.268 28.000,14.000 C28.000,21.732 21.732,27.1000 14.000,27.1000 C6.268,27.1000 -0.000,21.732 -0.000,14.000 C-0.000,6.268 6.268,0.000 14.000,0.000 Z" />
+            <path fill-rule="evenodd" stroke-width="2px" stroke="rgb(11, 158, 206)" fill="rgb(11, 158, 206)"
+              d="M17.534,13.779 L12.010,11.009 L12.010,16.551 L17.534,13.779 Z" />
+          </svg>
+        </a>
+      </p>
+    </div>
+    <div>
+      <img class="aboutImg aboutImg3" src="<?php echo esc_url(get_theme_file_uri('images/top/about_3.png')); ?>" width="350" height="520" alt="">
+    </div>
+  </section>
+
+  <section class="medicalInformation">
     <div class="inner">
+      <h2 class="heading">
+        <span class="headingJa">
+          診療案内
+        </span>
+        <span class="headingEn">Medical information</span>
+      </h2>
+      <div class="medicalInformationList">
+        <div class="medicalInformationItem">
+          <a href="#">
+            <div class="medicalInformationHeader">
+              <span class="medicalInformationTitle">一般内科</span>
+              <div class="medicalInformationIcon">
+                <img src="<?php echo esc_url(get_theme_file_uri('images/top/icon_medicalInformation_1.png')); ?>" width="82" height="82" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="medicalInformationItem">
+          <a href="#">
+            <div class="medicalInformationHeader">
+              <span class="medicalInformationTitle">一般内科</span>
+              <div class="medicalInformationIcon">
+                <img src="<?php echo esc_url(get_theme_file_uri('images/top/icon_medicalInformation_2.png')); ?>" width="76" height="107" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="medicalInformationItem">
+          <a href="#">
+            <div class="medicalInformationHeader">
+              <span class="medicalInformationTitle">一般内科</span>
+              <div class="medicalInformationIcon">
+                <img src="<?php echo esc_url(get_theme_file_uri('images/top/icon_medicalInformation_2.png')); ?>" width="104" height="96" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="medicalInformationItem">
+          <a href="#">
+            <div class="medicalInformationHeader">
+              <span class="medicalInformationTitle">一般内科</span>
+              <div class="medicalInformationIcon">
+                <img src="<?php echo esc_url(get_theme_file_uri('images/top/icon_medicalInformation_4.png')); ?>" width="93" height="85" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 </main>
