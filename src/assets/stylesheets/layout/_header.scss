@@ -46,6 +46,8 @@
 }
 
 .header {
+  position: relative;
+  z-index: 1;
   background: #f2f5f6;
   height: var(--header-height);
   .headerInner {
@@ -86,7 +88,7 @@
   .headerNav {
     margin-right: 30px;
     padding-right: 30px;
-    border-right: 1px dashed rgba(11, 158, 206, 0.3);
+    border-right: 1px dashed var(--primary-color-transparency);
   }
   .headerNavList {
     display: flex;
@@ -100,43 +102,6 @@
       letter-spacing: 0.1em;
       font-size: 15px;
       font-weight: 600;
-    }
-  }
-  .headerContact {
-    display: flex;
-    column-gap: 20px;
-    align-items: baseline;
-  }
-  .headerContactText {
-    line-height: 1;
-    letter-spacing: 0.1em;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--primary-color);
-  }
-  .headerContactNumber {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    column-gap: 4px;
-    line-height: 1;
-    letter-spacing: 0.05em;
-    font-size: 26px;
-    font-weight: 600;
-    color: var(--primary-color);
-    img {
-      aspect-ratio: 1 / 1;
-      width: 20px;
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      z-index: 0;
-      bottom: -5px;
-      left: 0;
-      width: 100%;
-      height: 10px;
-      background: rgba(11, 158, 206, 0.1);
     }
   }
   .headerTime {

@@ -7,6 +7,16 @@
   <meta name="description" content="<?php echo esc_attr(switch_description()); ?>">
   <title><?php echo switch_title(); ?></title>
   <link rel="icon" type="image/png" href="<?php echo esc_url(get_theme_file_uri('images/favicon.png')); ?>">
+  <script>
+  (function(d) {
+    var config = {
+      kitId: 'caz7vyr',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
   <?php wp_head(); ?>
 </head>
 
@@ -68,9 +78,9 @@
           </ul>
         </nav>
         <div class="headerInfo">
-          <div class="headerContact">
-            <p class="headerContactText">お問い合わせは</p>
-            <p class="headerContactNumber">
+          <div class="phone">
+            <p class="phoneText">お問い合わせは</p>
+            <p class="phoneNumber">
               <img src="<?php echo esc_url(get_theme_file_uri('images/icon_contact.png')); ?>" alt="Phone">
               0997-69-4622
             </p>

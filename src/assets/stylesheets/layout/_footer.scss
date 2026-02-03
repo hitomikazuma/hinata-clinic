@@ -1,1 +1,9 @@
 @use '../settings/index' as *;
+
+.footer {
+  padding-top: 100px;
+  background: #e4f1f5;
+  .inner {
+    max-width: calc(var(--window-width-medium) + var(--inner-padding-inline) * 2);
+  }
+}

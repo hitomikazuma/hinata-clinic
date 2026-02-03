@@ -1,3 +1,4 @@
+@use '../settings/functions' as *;
 @use '../settings/mixins' as *;
 @use '../settings/breakpoints' as *;
 
@@ -28,9 +29,8 @@ html {
 body {
   overflow-x: hidden;
   height: 100%;
-  font-family: 'Shippori Mincho', 'Sorts Mill Goudy', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN',
-    'Yu Gothic', 'Yu Gothic UI', 'Meiryo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    sans-serif;
+  font-family: 'dnp-shuei-mgothic-std', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic',
+    'Yu Gothic UI', 'Meiryo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-style: normal;
   font-weight: 400;
   color: var(--font-color);
@@ -55,9 +55,9 @@ li,
 small,
 strong,
 span {
-  line-height: 1.6;
+  line-height: lh(36, 18);
   letter-spacing: 0.1em;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--font-color);
 }
 
