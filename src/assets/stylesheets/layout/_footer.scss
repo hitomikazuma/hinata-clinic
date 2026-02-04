@@ -11,9 +11,13 @@
     column-gap: 90px;
     max-width: calc(var(--window-width-medium) + var(--inner-padding-inline) * 2);
     padding-bottom: 150px;
-    > div {
+    > div:not(.footerInfo) {
       flex-shrink: 0;
     }
+  }
+  .footerInfo {
+    flex-shrink: 1;
+    min-width: 0;
   }
   .footerTitle {
     line-height: lh(44, 24);
@@ -127,5 +131,11 @@
       font-size: 14px;
       color: var(--primary-color);
     }
+  }
+  .footerIllust {
+    padding-inline: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 }

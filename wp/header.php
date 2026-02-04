@@ -8,15 +8,35 @@
   <title><?php echo switch_title(); ?></title>
   <link rel="icon" type="image/png" href="<?php echo esc_url(get_theme_file_uri('images/favicon.png')); ?>">
   <script>
-  (function(d) {
-    var config = {
-      kitId: 'caz7vyr',
-      scriptTimeout: 3000,
-      async: true
-    },
-    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-  })(document);
-</script>
+    (function(d) {
+      var config = {
+          kitId: 'caz7vyr',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h = d.documentElement,
+        t = setTimeout(function() {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function() {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config)
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
   <?php wp_head(); ?>
 </head>
 
@@ -27,19 +47,21 @@
     <p class="fixedMenuButton">
       <a href="#">
         <img src="<?php echo esc_url(get_theme_file_uri('images/icon_calendar.png')); ?>" width="29" height="31" alt="アイコン ご予約はこちらから">
-        ご予約は<br>こちらから
+        <span class="isDesktop">ご予約は<br>こちらから</span>
+        <span class="isMobile">Web予約</span>
       </a>
     </p>
     <p class="fixedMenuButton">
       <a href="#">
         <img src="<?php echo esc_url(get_theme_file_uri('images/icon_interview.png')); ?>" width="32" height="32" alt="アイコン 事前Web問診">
-        事前<br>Web問診
+        <span class="isDesktop">事前<br>Web問診</span>
+        <span class="isMobile">事前問診</span>
       </a>
     </p>
     <p class="fixedMenuButton">
       <a href="#">
         <img src="<?php echo esc_url(get_theme_file_uri('images/icon_time.png')); ?>" width="20" height="20" alt="アイコン 診察時間">
-        診察時間
+        <span>診察時間</span>
       </a>
     </p>
   </div>

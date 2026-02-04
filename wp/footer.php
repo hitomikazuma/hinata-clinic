@@ -78,7 +78,7 @@
         </li>
       </ul>
     </div>
-    <div>
+    <div class="footerInfo">
       <img src="<?php echo esc_url(get_theme_file_uri('images/logo.png')); ?>" width="216" height="82" alt="Hinata Clinic">
       <div class="phone">
         <p class="phoneNumber">
@@ -107,6 +107,13 @@
         Page top
       </a>
     </p>
+  </div>
+  <div class="footerIllust">
+    <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_1.png')); ?>" width="214px" height="118px" alt="footer illust">
+    <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_2.png')); ?>" width="222px" height="114px" alt="footer illust">
+    <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_3.png')); ?>" width="239px" height="125px" alt="footer illust">
+    <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_4.png')); ?>" width="48px" height="72px" alt="footer illust">
+    <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_5.png')); ?>" width="37px" height="64px" alt="footer illust">
   </div>
 </footer>
 

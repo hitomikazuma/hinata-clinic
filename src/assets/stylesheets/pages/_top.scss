@@ -6,12 +6,19 @@
       display: flex;
       flex-direction: column;
       row-gap: 25px;
+      @include mq-down(md) {
+        row-gap: 10px;
+      }
       .headingJa {
         display: block;
         line-height: lh(70, 40);
         letter-spacing: 0.1em;
         font-size: 40px;
         color: var(--primary-color);
+        @include mq-down(md) {
+          line-height: lh(53, 28);
+          font-size: 28px;
+        }
       }
       .headingEn {
         position: relative;
@@ -23,6 +30,9 @@
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         color: var(--secondary-color);
+        @include mq-down(md) {
+          font-size: 12px;
+        }
         &::before {
           content: '';
           display: block;
@@ -31,6 +41,10 @@
           background: var(--secondary-color);
           border-radius: 50%;
           transform: translateY(1px);
+          @include mq-down(md) {
+            width: 5px;
+            height: 5px;
+          }
         }
       }
     }
@@ -39,27 +53,46 @@
       flex-direction: column;
       row-gap: 40px;
       margin-top: 80px;
+      @include mq-down(md) {
+        row-gap: 35px;
+        margin-top: 45px;
+      }
     }
     .sectionDescriptionHeading {
       line-height: lh(44, 26);
       letter-spacing: 0.1em;
       font-size: 26px;
+      @include mq-down(md) {
+        line-height: lh(36, 18);
+        font-size: 18px;
+      }
     }
     .sectionDescription {
       line-height: lh(36, 18);
       letter-spacing: 0.1em;
       font-size: 18px;
+      @include mq-down(md) {
+        line-height: lh(28, 14);
+        font-size: 14px;
+      }
     }
     .visual {
       position: relative;
       height: calc(100vh - var(--header-height));
       padding-top: 90px;
       background: #f2f5f6;
+      @include mq-down(md) {
+        padding-top: 25px;
+      }
       .visualItem {
         position: relative;
         z-index: 1;
         width: 80%;
         margin-inline: auto;
+        @include mq-down(md) {
+          width: 100%;
+          margin-inline: 0;
+        }
       }
       .visualTextWrap {
         position: absolute;
@@ -69,6 +102,11 @@
         transform: translateY(-50%);
         width: 100%;
         height: fit-content;
+        @include mq-down(md) {
+          position: static;
+          transform: translateY(0);
+          margin-bottom: 35px;
+        }
       }
       .visualTitle {
         box-decoration-break: clone;
@@ -82,6 +120,9 @@
         color: var(--primary-color);
         background: white;
         border-radius: 10px;
+        @include mq-down(md) {
+          font-size: 22px;
+        }
         span {
           display: block;
         }
@@ -90,6 +131,10 @@
         letter-spacing: 0.1em;
         font-size: 22px;
         margin-top: 30px;
+        @include mq-down(md) {
+          margin-top: 15px;
+          font-size: 15px;
+        }
       }
       .visualIllustration {
         position: absolute;
@@ -98,10 +143,16 @@
         left: 0;
         width: 100%;
         height: fit-content;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding-inline: 50px;
+        @include mq-down(md) {
+          bottom: 100px;
+          padding-inline: 0px;
+        }
+        & > div {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding-inline: 50px;
+        }
       }
       .visualBg {
         position: absolute;
@@ -110,38 +161,78 @@
         left: 0;
         width: 100%;
         height: fit-content;
+        @include mq-down(md) {
+          bottom: 100px;
+        }
       }
     }
 
     .news {
       padding-top: 190px;
+      @include mq-down(md) {
+        padding-top: 160px;
+      }
       .inner {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         column-gap: 150px;
         max-width: calc(var(--window-width-medium) + var(--inner-padding-inline) * 2);
+        @include mq-down(md) {
+          flex-direction: column;
+          column-gap: 0;
+          max-width: none;
+        }
       }
       .textButton {
         margin-top: 60px;
+        @include mq-down(md) {
+          margin-top: 20px;
+          margin-left: auto;
+        }
       }
       .newsList {
         flex: 1;
         min-width: 0;
+        @include mq-down(md) {
+          flex: none;
+          width: 100%;
+          margin-top: 25px;
+        }
       }
       .newsItem {
         border-bottom: 1px dashed var(--primary-color-transparency);
+        @include mq-down(md) {
+          width: 100%;
+        }
         a {
           display: flex;
           align-items: center;
           column-gap: 30px;
           padding-block: 30px;
+          @include mq-down(md) {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            padding-block: 25px;
+          }
+        }
+      }
+      .newsItemHeader {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        @include mq-down(md) {
+          column-gap: 15px;
         }
       }
       .newsDate {
         letter-spacing: 0.1em;
         font-size: 15px;
         color: var(--primary-color);
+        @include mq-down(md) {
+          font-size: 12px;
+        }
       }
       .newsTag {
         padding: 10px 18px;
@@ -151,10 +242,18 @@
         color: var(--primary-color);
         border: 1px solid var(--primary-color);
         border-radius: 5px;
+        @include mq-down(md) {
+          padding: 5px 7px;
+          font-size: 11px;
+        }
       }
       .newsTitle {
         letter-spacing: 0.1em;
         font-size: 18px;
+        @include mq-down(md) {
+          margin-top: 10px;
+          font-size: 14px;
+        }
       }
     }
 
@@ -162,20 +261,69 @@
       padding-top: 250px;
       justify-content: space-between;
       display: flex;
+      @include mq-down(md) {
+        position: relative;
+        padding-top: 88px;
+        flex-direction: column;
+      }
+      > div:nth-child(1) {
+        @include mq-down(md) {
+          order: 2;
+        }
+      }
+      > div:nth-child(2) {
+        @include mq-down(md) {
+          order: 1;
+          padding-inline: calc(var(--base-padding-inline) * 3);
+        }
+      }
+      > div:nth-child(3) {
+        @include mq-down(md) {
+          order: 3;
+        }
+      }
       .aboutImg {
         display: block;
+        @include mq-down(md) {
+        }
       }
       .aboutImg1 {
         transform: translate(170px, -100px);
+        @include mq-down(md) {
+          transform: none;
+          aspect-ratio: 100 / 140;
+          width: 100px;
+          height: auto;
+          margin: 70px 0 0 55px;
+        }
       }
       .aboutImg2 {
         transform: translateY(140px);
+        @include mq-down(md) {
+          transform: none;
+          aspect-ratio: 280 / 380;
+          width: 140px;
+          height: auto;
+          margin-top: 100px;
+        }
       }
       .aboutImg3 {
         transform: translateY(100px);
+        @include mq-down(md) {
+          transform: none;
+          position: absolute;
+          bottom: 60px;
+          right: 0;
+          aspect-ratio: 360 / 520;
+          width: 180px;
+          height: auto;
+        }
       }
       .button {
         margin-top: 80px;
+        @include mq-down(md) {
+          margin-top: 50px;
+        }
       }
     }
 
@@ -183,14 +331,26 @@
       margin-top: 230px;
       padding-top: 160px;
       background: #f2f5f6;
+      @include mq-down(md) {
+        margin-top: 88px;
+        padding-top: 80px;
+      }
       .inner {
         max-width: calc(var(--window-width-medium) + var(--inner-padding-inline) * 2);
+        @include mq-down(md) {
+          max-width: none;
+        }
       }
       .medicalInformationList {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
         margin-top: 80px;
+        @include mq-down(md) {
+          grid-template-columns: 1fr;
+          gap: 10px;
+          margin-top: 40px;
+        }
       }
       .medicalInformationItem {
         a {
@@ -200,12 +360,19 @@
           padding: 40px 50px;
           background: white;
           border-radius: 40px;
+          @include mq-down(md) {
+            padding: 25px 30px;
+            border-radius: 20px;
+          }
         }
         &:nth-child(1) {
           .medicalInformationIcon {
             img {
               width: 40px;
               height: auto;
+              @include mq-down(md) {
+                width: 22px;
+              }
             }
           }
         }
@@ -214,6 +381,9 @@
             img {
               width: 38px;
               height: auto;
+              @include mq-down(md) {
+                width: 23px;
+              }
             }
           }
         }
@@ -222,6 +392,9 @@
             img {
               width: 36px;
               height: auto;
+              @include mq-down(md) {
+                width: 32px;
+              }
             }
           }
         }
@@ -230,6 +403,9 @@
             img {
               width: 46px;
               height: auto;
+              @include mq-down(md) {
+                width: 28px;
+              }
             }
           }
         }
@@ -248,8 +424,16 @@
         letter-spacing: 0.1em;
         font-size: 26px;
         color: var(--primary-color);
+        @include mq-down(md) {
+          column-gap: 10px;
+          font-size: 20px;
+        }
         svg {
           transform: translateY(1px);
+          @include mq-down(md) {
+            width: 10px;
+            height: auto;
+          }
         }
       }
       .medicalInformationIcon {
@@ -261,28 +445,48 @@
         background: white;
         border: 1px solid var(--primary-color-transparency);
         border-radius: 50%;
+        @include mq-down(md) {
+          width: 55px;
+          height: 55px;
+        }
       }
       .medicalInformationContent {
         margin-top: 30px;
         padding-top: 30px;
         border-top: 1px dashed var(--primary-color-transparency);
+        @include mq-down(md) {
+          margin-top: 25px;
+          padding-top: 25px;
+        }
       }
       .medicalInformationText {
         line-height: lh(36, 18);
         letter-spacing: 0.1em;
         font-size: 18px;
+        @include mq-down(md) {
+          line-height: lh(26, 14);
+          font-size: 14px;
+        }
       }
     }
 
     .preventiveMedicine {
       padding-block: 140px;
       background: #f2f5f6;
+      @include mq-down(md) {
+        padding-block: 100px;
+      }
       .inner {
         display: flex;
         justify-content: center;
         align-items: flex-start;
         column-gap: 115px;
         max-width: calc(var(--window-width-medium) + var(--inner-padding-inline) * 2);
+        @include mq-down(md) {
+          flex-direction: column-reverse;
+          column-gap: 0;
+          max-width: none;
+        }
       }
       .button {
         margin-top: 80px;
@@ -291,6 +495,10 @@
         position: relative;
         flex: 1;
         height: 450px;
+        @include mq-down(md) {
+          height: 270px;
+          margin-top: 50px;
+        }
       }
       .preventiveMedicineContentBg {
         position: absolute;
@@ -308,6 +516,10 @@
         letter-spacing: 0.15em;
         font-size: 32px;
         color: var(--primary-color);
+        @include mq-down(md) {
+          padding-top: 15px;
+          font-size: 24px;
+        }
       }
       .preventiveMedicineItem {
         position: absolute;
@@ -318,6 +530,10 @@
         column-gap: 20px;
         width: 204px;
         height: 181px;
+        @include mq-down(md) {
+          width: 140px;
+          height: 110px;
+        }
         &:nth-child(1) {
           top: 0;
           left: 50%;
@@ -331,6 +547,12 @@
           bottom: 0;
           right: 0;
         }
+        svg {
+          @include mq-down(md) {
+            width: 140px;
+            height: auto;
+          }
+        }
       }
       .preventiveMedicineItemTextWrap {
         position: absolute;
@@ -343,33 +565,56 @@
         align-items: center;
         row-gap: 15px;
         width: 100%;
+        @include mq-down(md) {
+          row-gap: 10px;
+        }
       }
       .preventiveMedicineItemTitle {
         line-height: 1;
         letter-spacing: 0.15em;
         font-size: 24px;
         color: var(--primary-color);
+        @include mq-down(md) {
+          font-size: 18px;
+        }
       }
       .preventiveMedicineItemsubTitle {
         line-height: 1;
         letter-spacing: 0.2em;
         font-size: 15px;
         color: var(--secondary-color);
+        @include mq-down(md) {
+          font-size: 12px;
+        }
       }
       .preventiveMedicineIcon {
         position: absolute;
         &:first-child {
           top: 100px;
           left: 0;
+          @include mq-down(md) {
+            left: 30px;
+            width: 42px;
+            height: auto;
+          }
         }
         &:nth-child(2) {
           top: 100px;
           right: 0;
+          @include mq-down(md) {
+            right: 30px;
+            width: 34px;
+            height: auto;
+          }
         }
         &:nth-child(3) {
           bottom: 0;
           left: 50%;
           transform: translateX(-50%);
+          @include mq-down(md) {
+            width: 30px;
+            height: auto;
+          }
         }
       }
     }
@@ -378,6 +623,9 @@
       position: relative;
       padding-top: 200px;
       background: white;
+      @include mq-down(md) {
+        padding-top: 100px;
+      }
       .communityHealthRoomIllust {
         position: absolute;
         top: -115px;
@@ -389,6 +637,11 @@
         align-items: center;
         column-gap: 115px;
         max-width: calc(var(--window-width-medium) + var(--inner-padding-inline) * 2);
+        @include mq-down(md) {
+          flex-direction: column;
+          column-gap: 0;
+          max-width: none;
+        }
       }
       .communityHealthRoomLeft {
         flex-shrink: 0;
@@ -399,6 +652,9 @@
         align-items: center;
         column-gap: 80px;
         width: fit-content;
+        @include mq-down(md) {
+          column-gap: 40px;
+        }
       }
       .headingWrap {
         display: flex;
@@ -419,9 +675,17 @@
         border: 1px solid var(--primary-color-transparency);
         border-radius: 50%;
         background: white;
+        @include mq-down(md) {
+          width: 85px;
+          height: 85px;
+          font-size: 15px;
+        }
       }
       .communityHealthRoomSchedule {
         margin-top: 80px;
+        @include mq-down(md) {
+          margin-top: 50px;
+        }
       }
       .communityHealthRoomScheduleTable {
         border-collapse: separate;
@@ -431,6 +695,11 @@
         padding: 10px 30px;
         background: #f4f9fc;
         border-radius: 40px;
+        @include mq-down(md) {
+          max-width: none;
+          padding: 15px;
+          border-radius: 20px;
+        }
         th,
         td {
           padding-block: 20px;
@@ -438,6 +707,10 @@
           text-align: center;
           letter-spacing: 0.1em;
           font-size: 16px;
+          @include mq-down(md) {
+            padding-block: 15px;
+            font-size: 12px;
+          }
         }
         th {
           color: var(--primary-color);
@@ -455,17 +728,47 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include mq-down(md) {
+          width: 100%;
+          margin-top: 60px;
+        }
+        & > div {
+          @include mq-down(md) {
+            width: 100%;
+          }
+        }
       }
       .communityHealthRoomImg {
+        @include mq-down(md) {
+          display: block;
+        }
         &:nth-child(1) {
           transform: translateX(140px);
+          @include mq-down(md) {
+            transform: none;
+            width: 165px;
+            height: auto;
+            margin-left: auto;
+            margin-right: 20px;
+          }
         }
         &:nth-child(2) {
           margin-top: 55px;
+          @include mq-down(md) {
+            width: 150px;
+            height: auto;
+            margin-top: 28px;
+            margin-left: 20px;
+          }
         }
       }
       .communityHealthRoomContentIllust {
         transform: translate(100px, -50px);
+        @include mq-down(md) {
+          transform: translate(45px, -53px);
+          width: 106px;
+          height: auto;
+        }
       }
     }
 
