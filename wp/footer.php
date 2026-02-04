@@ -79,7 +79,7 @@
       </ul>
     </div>
     <div class="footerInfo">
-      <img src="<?php echo esc_url(get_theme_file_uri('images/logo.png')); ?>" width="216" height="82" alt="Hinata Clinic">
+      <img class="footerLogo" src="<?php echo esc_url(get_theme_file_uri('images/logo.png')); ?>" width="216" height="82" alt="Hinata Clinic">
       <div class="phone">
         <p class="phoneNumber">
           <img src="<?php echo esc_url(get_theme_file_uri('images/icon_contact.png')); ?>" alt="Phone">
@@ -98,7 +98,7 @@
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
-          width="25px" height="25px">
+          width="25px" height="25px" viewBox="0 0 25 25">
           <path fill-rule="evenodd" fill="rgb(11, 158, 206)"
             d="M0.162,12.162 C0.162,5.535 5.535,0.162 12.162,0.162 C18.790,0.162 24.162,5.535 24.162,12.162 C24.162,18.790 18.790,24.162 12.162,24.162 C5.535,24.162 0.162,18.790 0.162,12.162 Z" />
           <path fill-rule="evenodd" stroke-width="2px" stroke="rgb(255, 255, 255)" fill="rgb(255, 255, 255)"

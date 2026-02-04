@@ -1,7 +1,12 @@
+@use '../settings/index' as *;
+
 .phone {
   display: flex;
   column-gap: 20px;
   align-items: baseline;
+  @include mq-down(md) {
+    column-gap: 10px;
+  }
 }
 .phoneText {
   line-height: 1;
@@ -9,6 +14,9 @@
   font-size: 15px;
   font-weight: 600;
   color: var(--primary-color);
+  @include mq-down(md) {
+    font-size: 13px;
+  }
 }
 .phoneNumber {
   position: relative;
@@ -20,9 +28,17 @@
   font-size: 26px;
   font-weight: 600;
   color: var(--primary-color);
+  @include mq-down(md) {
+    column-gap: 3px;
+    font-size: 26px;
+  }
   img {
     aspect-ratio: 1 / 1;
     width: 20px;
+    @include mq-down(md) {
+      width: 17px;
+      transform: translateY(-2px);
+    }
   }
   &::before {
     content: '';
@@ -33,5 +49,9 @@
     width: 100%;
     height: 10px;
     background: rgba(11, 158, 206, 0.1);
+    @include mq-down(md) {
+      bottom: 0;
+      height: 8px;
+    }
   }
 }

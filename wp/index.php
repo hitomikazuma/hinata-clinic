@@ -524,7 +524,7 @@
             <svg
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
-              width="11.5px" height="9.5px">
+              width="11.5px" height="9.5px" viewBox="0 0 11.5 9.5">
               <path fill-rule="evenodd" stroke="rgb(11, 158, 206)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
                 d="M0.500,3.500 L7.500,3.500 L7.500,8.500 L0.500,8.500 L0.500,3.500 Z" />
               <path fill-rule="evenodd" stroke="rgb(11, 158, 206)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -586,9 +586,9 @@
           <h2 class="informationTitle">系列・提携店舗のご案内</h2>
           <p class="informationDescription">
             健康と癒しを身近に感じていただけるよう、
-            <br>
+            <br class="isDesktop">
             同じ陽向ビル内にリラクゼーションサロンなどの提携店舗がございます。
-            <br>
+            <br class="isDesktop">
             心も体もやすらぐひとときをお過ごしください
           </p>
         </header>
@@ -613,7 +613,7 @@
             <div class="informationImg"></div>
             <div class="informationContent">
               <p class="informationFloor">1F</p>
-              <p class="informationIndustry">カフェ・<br>フードスタンド</p>
+              <p class="informationIndustry">カフェ・<br class="isDesktop">フードスタンド</p>
               <p class="informationName">たゆたう</p>
             </div>
           </div>
@@ -628,13 +628,13 @@
           <div class="informationItem">
             <div class="informationImg"></div>
             <div class="informationContent">
-              <p class="informationIndustry">メディカル＆<br>リラクゼーション<br>施設</p>
+              <p class="informationIndustry">メディカル＆<br>リラクゼーション<br class="isDesktop">施設</p>
               <a class="informationName informationNameLink" href="#">
                 陽向ビル
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                  width="11.5px" height="9.5px">
+                  width="11.5px" height="9.5px" viewBox="0 0 11.5 9.5">
                   <path fill-rule="evenodd" stroke="rgb(11, 158, 206)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
                     d="M0.500,3.500 L7.500,3.500 L7.500,8.500 L0.500,8.500 L0.500,3.500 Z" />
                   <path fill-rule="evenodd" stroke="rgb(11, 158, 206)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"

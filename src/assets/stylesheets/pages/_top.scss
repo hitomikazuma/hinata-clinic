@@ -776,40 +776,72 @@
       margin-top: 90px;
       padding-top: 150px;
       background: #e4f1f5;
+      @include mq-down(md) {
+        margin-top: 50px;
+        padding-top: 60px;
+      }
       .inner {
         display: flex;
         justify-content: center;
         align-items: flex-start;
         column-gap: 85px;
         max-width: calc(var(--window-width-medium) + var(--inner-padding-inline) * 2);
+        @include mq-down(md) {
+          flex-direction: column;
+          column-gap: 0;
+          max-width: none;
+        }
       }
       .accessText {
         line-height: lh(24, 16);
         letter-spacing: 0.1em;
         font-size: 16px;
+        @include mq-down(md) {
+          line-height: lh(24, 13);
+          font-size: 13px;
+        }
       }
       .accessHeader {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        img {
+          @include mq-down(md) {
+            width: 83px;
+            height: auto;
+          }
+        }
       }
       .accessTitle {
         margin-top: 20px;
         letter-spacing: 0.1em;
         font-size: 30px;
         color: var(--primary-color);
+        @include mq-down(md) {
+          margin-top: 20px;
+          font-size: 25px;
+        }
       }
       .phone {
         margin-top: 20px;
       }
       .accessFax {
         margin-top: 30px;
+        @include mq-down(md) {
+          margin-top: 20px;
+        }
       }
       .accessAddress {
         margin-top: 10px;
+        @include mq-down(md) {
+          margin-top: 5px;
+        }
       }
       .accessLink {
         margin-top: 10px;
+        @include mq-down(md) {
+          margin-top: 5px;
+        }
         a {
           display: flex;
           align-items: center;
@@ -817,9 +849,21 @@
           line-height: 1;
           letter-spacing: 0.1em;
           font-size: 16px;
+          @include mq-down(md) {
+            column-gap: 7px;
+            font-size: 13px;
+          }
           span {
             font-size: 16px;
             border-bottom: 1px solid var(--primary-color);
+            @include mq-down(md) {
+              font-size: 13px;
+            }
+          }
+          svg {
+            @include mq-down(md) {
+              transform: translateY(2px);
+            }
           }
         }
       }
@@ -831,8 +875,13 @@
         border-bottom: 1px dashed var(--primary-color-transparency);
         th,
         td {
+          line-height: 1;
           padding-block: 10px;
           padding-inline: 10px;
+          @include mq-down(md) {
+            padding-block: 10px;
+            padding-inline: 5px;
+          }
         }
         thead {
           th,
@@ -845,12 +894,18 @@
               letter-spacing: 0.1em;
               font-size: 14px;
               font-weight: 400;
+              @include mq-down(md) {
+                font-size: 11px;
+              }
             }
             &:not(:first-child) {
               letter-spacing: 0.1em;
               font-size: 16px;
               font-weight: 600;
               color: var(--primary-color);
+              @include mq-down(md) {
+                font-size: 12px;
+              }
             }
           }
         }
@@ -864,12 +919,18 @@
             letter-spacing: 0.1em;
             font-size: 14px;
             font-weight: 400;
+            @include mq-down(md) {
+              font-size: 11px;
+            }
           }
           td {
             text-align: center;
             letter-spacing: 0.1em;
             font-size: 14px;
             font-weight: 400;
+            @include mq-down(md) {
+              font-size: 11px;
+            }
           }
         }
       }
@@ -877,8 +938,14 @@
         line-height: lh(18, 12);
         letter-spacing: 0.05em;
         font-size: 12px;
+        @include mq-down(md) {
+          font-size: 10px;
+        }
         &:first-child {
           margin-top: 20px;
+          @include mq-down(md) {
+            margin-top: 10px;
+          }
         }
         &:last-child {
           margin-top: 5px;
@@ -887,6 +954,10 @@
       .accessMap {
         overflow: hidden;
         border-radius: 40px;
+        @include mq-down(md) {
+          margin-top: 30px;
+          border-radius: 20px;
+        }
         iframe {
           aspect-ratio: 500 / 550;
           max-width: 500px;
@@ -898,8 +969,14 @@
     .information {
       padding-top: 100px;
       background: #e4f1f5;
+      @include mq-down(md) {
+        padding-top: 75px;
+      }
       .inner {
         max-width: calc(var(--window-width-large) + var(--inner-padding-inline) * 2);
+        @include mq-down(md) {
+          max-width: none;
+        }
       }
       .informationWrap {
         position: relative;
@@ -909,6 +986,11 @@
         margin-inline: auto;
         border-radius: 40px;
         background: white;
+        @include mq-down(md) {
+          padding-block: 50px;
+          padding-inline: 30px;
+          border-radius: 20px;
+        }
         &::before {
           content: '';
           position: absolute;
@@ -936,6 +1018,12 @@
         justify-content: space-between;
         align-items: flex-start;
         column-gap: 100px;
+        @include mq-down(md) {
+          flex-direction: column;
+          align-items: flex-start;
+          column-gap: 0px;
+          row-gap: 30px;
+        }
       }
       .informationTitle {
         flex-shrink: 0;
@@ -944,17 +1032,31 @@
         font-size: 26px;
         color: var(--primary-color);
         transform: translateY(4px);
+        @include mq-down(md) {
+          margin-inline: auto;
+          font-size: 20px;
+          transform: translateY(0);
+        }
       }
       .informationDescription {
         line-height: lh(32, 16);
         letter-spacing: 0.1em;
         font-size: 16px;
+        @include mq-down(md) {
+          line-height: lh(26, 13);
+          font-size: 13px;
+        }
       }
       .informationList {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         gap: 15px;
         margin-top: 50px;
+        @include mq-down(md) {
+          grid-template-columns: 1fr;
+          gap: 10px;
+          margin-top: 30px;
+        }
       }
       .informationItem {
         display: flex;
@@ -962,19 +1064,34 @@
         padding: 30px;
         background: #f8fafa;
         border-radius: 40px;
+        @include mq-down(md) {
+          align-items: center;
+          column-gap: 10px;
+          padding: 20px;
+          border-radius: 20px;
+        }
         // 上段（1〜2番目）: 3列分 = 50%
         &:nth-child(-n + 2) {
           grid-column: span 3;
+          @include mq-down(md) {
+            grid-column: span 1;
+          }
         }
         // 下段（3番目以降）: 2列分 = 33.33%
         &:nth-child(n + 3) {
           grid-column: span 2;
+          @include mq-down(md) {
+            grid-column: span 1;
+          }
         }
         &:first-child,
         &:nth-child(2) {
           .informationImg {
             aspect-ratio: 150 / 100;
             max-width: 150px;
+            @include mq-down(md) {
+              max-width: 85px;
+            }
           }
         }
         &:nth-child(3),
@@ -984,6 +1101,10 @@
             aspect-ratio: 1 / 1;
             max-width: 100px;
             width: 100%;
+            @include mq-down(md) {
+              aspect-ratio: 150 / 100;
+              max-width: 85px;
+            }
           }
         }
       }
@@ -994,6 +1115,9 @@
         height: fit-content;
         background: #eaeaea;
         border-radius: 20px;
+        @include mq-down(md) {
+          border-radius: 10px;
+        }
       }
       .informationFloor {
         width: fit-content;
@@ -1003,28 +1127,47 @@
         font-size: 20px;
         color: var(--primary-color);
         border-bottom: 2px solid var(--primary-color);
+        @include mq-down(md) {
+          font-size: 11px;
+          border-bottom: 1px solid var(--primary-color);
+        }
       }
       .informationIndustry {
         margin-top: 10px;
         line-height: lh(20, 14);
         letter-spacing: 0.1em;
         font-size: 14px;
+        @include mq-down(md) {
+          margin-top: 5px;
+          line-height: lh(16, 10);
+          font-size: 10px;
+        }
       }
       .informationName {
         margin-top: 5px;
         letter-spacing: 0.1em;
         font-size: 20px;
         color: var(--primary-color);
+        @include mq-down(md) {
+          margin-top: 0;
+          font-size: 13px;
+        }
         span {
           display: inline;
           letter-spacing: 0.1em;
           font-size: 14px;
           color: var(--primary-color);
+          @include mq-down(md) {
+            font-size: 11px;
+          }
         }
         &Link {
           display: flex;
           align-items: center;
           column-gap: 10px;
+          @include mq-down(md) {
+            column-gap: 7px;
+          }
         }
       }
     }
