@@ -1,9 +1,131 @@
 @use '../settings/index' as *;
 
 .footer {
-  padding-top: 100px;
+  padding-block: 100px;
   background: #e4f1f5;
   .inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 90px;
     max-width: calc(var(--window-width-medium) + var(--inner-padding-inline) * 2);
+    padding-bottom: 150px;
+    > div {
+      flex-shrink: 0;
+    }
+  }
+  .footerTitle {
+    line-height: lh(44, 24);
+    letter-spacing: 0.1em;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  .footerSnsList {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 30px;
+  }
+  .footerSnsItem {
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+    }
+    img {
+      aspect-ratio: 1 / 1;
+      width: 50%;
+      height: auto;
+    }
+  }
+  .footerCopyright {
+    margin-top: 40px;
+    small {
+      letter-spacing: 0.1em;
+      font-size: 10px;
+    }
+  }
+  .footerNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 60px;
+  }
+  .footerNavList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .footerNavItem {
+    a {
+      position: relative;
+      letter-spacing: 0.1em;
+      font-size: 16px;
+      font-weight: 600;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -17px;
+        transform: translateY(-50%);
+        width: 7px;
+        height: 7px;
+        background: #ee8418;
+        border-radius: 50%;
+      }
+    }
+  }
+  .footerNavSubItem {
+    a {
+      letter-spacing: 0.1em;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  .phone {
+    margin-top: 25px;
+  }
+  .footerTextPrimary {
+    margin-top: 5px;
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--primary-color);
+    span {
+      letter-spacing: 0.1em;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+    &:first-of-type {
+      margin-top: 20px;
+    }
+  }
+  .footerText {
+    margin-top: 5px;
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .goTop {
+    position: absolute;
+    bottom: 0;
+    right: var(--inner-padding-inline);
+    a {
+      writing-mode: vertical-rl;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 10px;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.1em;
+      font-size: 14px;
+      color: var(--primary-color);
+    }
   }
 }

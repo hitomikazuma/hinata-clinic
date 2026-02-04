@@ -599,12 +599,34 @@
         max-width: calc(var(--window-width-large) + var(--inner-padding-inline) * 2);
       }
       .informationWrap {
+        position: relative;
         padding-block: 70px;
         padding-inline: 80px;
         width: 100%;
         margin-inline: auto;
         border-radius: 40px;
         background: white;
+        &::before {
+          content: '';
+          position: absolute;
+          top: -20px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 1px;
+          height: 40px;
+          border-right: 1px dashed var(--primary-color-transparency);
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          top: -33px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 10px;
+          height: 10px;
+          background: #ee8418;
+          border-radius: 50%;
+        }
       }
       .informationHeader {
         display: flex;
