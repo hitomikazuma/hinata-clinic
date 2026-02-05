@@ -1,0 +1,191 @@
+@use '../settings/breakpoints' as *;
+@use 'sass:map';
+
+// ===========================================
+// Wave Animation Patterns
+// オフセット系カスタムプロパティ（--waveOffsetTop等）は CSSの「長さ」として扱う（px/vw/% など）
+// 例: --waveOffsetTop: 180px;
+// move系カスタムプロパティ（--waveMoveX/--waveMoveY）も同様に「長さ」
+// 例: --waveMoveX: -18vw;
+// ===========================================
+
+// Pattern 1: ゆったり大きく往復 (top用)
+// 左方向に大きくゆっくり揺れる
+$wavePattern1: (
+  duration: 14s,
+  // keyframe: 0% → 50% → 100%
+  x0: 0,
+  y0: 0,
+  x50: -180,
+  y50: -50,
+  x100: 0,
+  y100: 0,
+);
+
+// ===========================================
+// Wave Theme Settings
+// ===========================================
+
+$waveThemes: (
+  visual: (
+    color1: #d7edf4,
+    // visualは「セクション高の半分」を波の高さにする
+    height: 150%,
+    // 下から出す演出なので基準オフセットは0
+    offsetTop: 0,
+    // 端の欠け（エッジ）を出しにくいよう、画面幅に連動させる
+    moveX: -18vw,
+    moveY: -40px,
+    duration: 10s,
+  ),
+  news: (
+    color1: #fff,
+  ),
+  medicalInformation: (
+    color1: #f2f5f6,
+  ),
+  communityHealthRoom: (
+    color1: #fff,
+  ),
+  access: (
+    color1: #e4f1f5,
+  ),
+  footer: (
+    color1: #fff,
+    // footerの波の高さ
+    height: 140px,
+    // 高さを絞ると "slice" の都合で波のうねりが見切れやすいので、表示領域へ寄せる
+    // ざっくり「画面幅に比例 - 波の高さ」で補正（波形のy=約502px / viewBox(1600x900)に合わせた係数）
+    offsetTop: calc(35vw - var(--waveHeight)),
+    // 端の欠け（エッジ）を出しにくいよう、画面幅に連動させる
+    moveX: -18vw,
+    moveY: -40px,
+    duration: 10s,
+  ),
+);
+
+// Theme map keys -> CSS custom properties
+$waveThemeCustomProps: (
+  color1: --waveColor1,
+  color2: --waveColor2,
+  color3: --waveColor3,
+  offsetTop: --waveOffsetTop,
+  offsetMiddle: --waveOffsetMiddle,
+  offsetBottom: --waveOffsetBottom,
+  moveX: --waveMoveX,
+  moveY: --waveMoveY,
+  height: --waveHeight,
+  amp: --waveAmp,
+  duration: --waveDuration,
+  easing: --waveEasing,
+);
+
+@mixin wave-theme($theme) {
+  @each $key, $customProp in $waveThemeCustomProps {
+    @if map.has-key($theme, $key) {
+      #{$customProp}: #{map.get($theme, $key)};
+    }
+  }
+}
+
+@each $name, $theme in $waveThemes {
+  .wave-#{$name} {
+    @include wave-theme($theme);
+  }
+}
+
+.waveDefs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.wave {
+  pointer-events: none;
+  position: absolute;
+  // NOTE: Safari/macでのチラつき対策のため negative z-index を避ける
+  z-index: 0;
+  inset: 0;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  @include mq-down(md) {
+    transform: translateY(-50px);
+  }
+
+  .waveSvg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: visible;
+    display: block;
+    width: 100%;
+    height: var(--waveHeight, clamp(64px, 12vw, 180px));
+    transform: scaleY(var(--waveAmp, 1));
+    transform-origin: 50% 50%;
+    backface-visibility: hidden;
+  }
+
+  .waveUse {
+    color: var(--waveColor1, #fffce7);
+  }
+
+  .waveLayer {
+    // prefers-reduced-motion 時の見た目崩れ防止（= 0%時点の位置）
+    transform: translate(0px, var(--waveOffsetTop, 180px));
+    will-change: transform;
+    animation: wavePattern1 var(--waveDuration, #{map.get($wavePattern1, duration)})
+      var(--waveEasing, ease-in-out) infinite;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+  }
+}
+
+// 下から出したいwave（例: visual）
+.wave--bottom {
+  // bottom固定 + 高さはテーマ変数で制御（overflowでクリップして見た目の高さを担保）
+  top: auto;
+  height: var(--waveHeight, clamp(64px, 12vw, 180px));
+  overflow: hidden;
+
+  // md以下での位置調整（上方向への逃がし）を無効化して、下固定を優先
+  @include mq-down(md) {
+    transform: none;
+  }
+
+  .waveSvg {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+    // 拡大しても下端がズレないように
+    transform-origin: 50% 100%;
+  }
+}
+
+// wave（背景）より常に手前に描画する
+.wave + .wrapper,
+.wave + .inner {
+  position: relative;
+  z-index: 1;
+}
+
+// ===========================================
+// Wave Animations
+// ===========================================
+
+@keyframes wavePattern1 {
+  0%,
+  100% {
+    transform: translate(0px, var(--waveOffsetTop, 180px));
+  }
+  50% {
+    transform: translate(
+      var(--waveMoveX, #{map.get($wavePattern1, x50)}px),
+      calc(var(--waveOffsetTop, 180px) + var(--waveMoveY, #{map.get($wavePattern1, y50)}px))
+    );
+  }
+}

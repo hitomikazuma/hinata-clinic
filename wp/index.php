@@ -2,34 +2,85 @@
 
 <main id="main" class="main" role="main">
   <section class="visual">
-    <div class="visualItem">
-      <div class="visualTextWrap">
-        <p class="visualTitle">
-          このまちの、家族の健康と
-          <br>
-          あなたの輝きを支えたい
-        </p>
-        <p class="visualDescription">病気になる前の<br>“気になる”を相談できる<br>身近な総合内科クリニック</p>
+    <div class="swiper js-visual-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="visualItem">
+            <div class="visualTextWrap">
+              <p class="visualTitle">
+                このまちの、家族の健康と
+                <br>
+                あなたの輝きを支えたい
+              </p>
+              <p class="visualDescription">病気になる前の<br>“気になる”を相談できる<br>身近な総合内科クリニック</p>
+            </div>
+            <img src="<?php echo esc_url(get_theme_file_uri('images/top/visual_1.png')); ?>" alt="Visual">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="visualItem">
+            <div class="visualTextWrap">
+              <p class="visualTitle">
+                このまちの、家族の健康と
+                <br>
+                あなたの輝きを支えたい
+              </p>
+              <p class="visualDescription">病気になる前の<br>“気になる”を相談できる<br>身近な総合内科クリニック</p>
+            </div>
+            <img src="<?php echo esc_url(get_theme_file_uri('images/top/visual_1.png')); ?>" alt="Visual">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="visualItem">
+            <div class="visualTextWrap">
+              <p class="visualTitle">
+                このまちの、家族の健康と
+                <br>
+                あなたの輝きを支えたい
+              </p>
+              <p class="visualDescription">病気になる前の<br>“気になる”を相談できる<br>身近な総合内科クリニック</p>
+            </div>
+            <img src="<?php echo esc_url(get_theme_file_uri('images/top/visual_1.png')); ?>" alt="Visual">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="visualItem">
+            <div class="visualTextWrap">
+              <p class="visualTitle">
+                このまちの、家族の健康と
+                <br>
+                あなたの輝きを支えたい
+              </p>
+              <p class="visualDescription">病気になる前の<br>“気になる”を相談できる<br>身近な総合内科クリニック</p>
+            </div>
+            <img src="<?php echo esc_url(get_theme_file_uri('images/top/visual_1.png')); ?>" alt="Visual">
+          </div>
+        </div>
       </div>
-      <img src="<?php echo esc_url(get_theme_file_uri('images/top/visual_1.png')); ?>" alt="Visual">
     </div>
+
     <div class="visualIllustration">
       <div class="isDesktopFlex">
       </div>
       <div class="isMobileFlex"></div>
     </div>
-    <picture>
-      <source
-        srcset="<?php echo esc_url(get_theme_file_uri('images/top/visual_bg_mobile.png')); ?>"
-        media="(max-width: 768px)">
-      <img
-        class="visualBg"
-        src="<?php echo esc_url(get_theme_file_uri('images/top/visual_bg.png')); ?>"
-        alt="">
-    </picture>
+    <div class="wave wave-visual wave--bottom" aria-hidden="true">
+      <svg class="waveSvg" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+        <g class="waveLayer">
+          <use class="waveUse" href="#waveShape" />
+        </g>
+      </svg>
+    </div>
   </section>
 
   <section class="news">
+    <div class="wave wave-news" aria-hidden="true">
+      <svg class="waveSvg" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+        <g class="waveLayer">
+          <use class="waveUse" href="#waveShape" />
+        </g>
+      </svg>
+    </div>
     <div class="inner">
       <div>
         <h2 class="heading">
@@ -144,6 +195,13 @@
   </section>
 
   <section class="medicalInformation">
+    <div class="wave wave-medicalInformation" aria-hidden="true">
+      <svg class="waveSvg" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+        <g class="waveLayer">
+          <use class="waveUse" href="#waveShape" />
+        </g>
+      </svg>
+    </div>
     <div class="inner">
       <h2 class="heading">
         <span class="headingJa">
@@ -426,6 +484,13 @@
   </section>
 
   <section class="communityHealthRoom">
+    <div class="wave wave-communityHealthRoom" aria-hidden="true">
+      <svg class="waveSvg" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+        <g class="waveLayer">
+          <use class="waveUse" href="#waveShape" />
+        </g>
+      </svg>
+    </div>
     <div class="inner">
       <div class="communityHealthRoomLeft">
         <h2 class="heading">
@@ -496,6 +561,13 @@
   </section>
 
   <section class="access">
+    <div class="wave wave-access" aria-hidden="true">
+      <svg class="waveSvg" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+        <g class="waveLayer">
+          <use class="waveUse" href="#waveShape" />
+        </g>
+      </svg>
+    </div>
     <div class="inner">
       <div>
         <header class="accessHeader">

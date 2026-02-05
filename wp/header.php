@@ -43,6 +43,12 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
 
+  <svg class="waveDefs" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <path id="waveShape" fill="currentColor" d="M-363.852,502.589c0,0,236.988-41.997,505.475,0s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v20000H-363.852V502.589z" />
+    </defs>
+  </svg>
+
   <div class="fixedMenu">
     <p class="fixedMenuButton">
       <a href="#">

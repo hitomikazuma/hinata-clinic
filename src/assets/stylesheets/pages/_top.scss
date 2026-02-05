@@ -2,6 +2,9 @@
 
 .home {
   .main {
+    section {
+      position: relative;
+    }
     .heading {
       display: flex;
       flex-direction: column;
@@ -94,6 +97,20 @@
           margin-inline: 0;
         }
       }
+      // Swiper（前後スライドを両端にチラ見せ）
+      .js-visual-swiper {
+        .swiper-slide {
+          width: 80%;
+          @include mq-down(md) {
+            width: 100%;
+          }
+        }
+        // スライド幅に合わせて中身は100%に
+        .visualItem {
+          width: 100%;
+          margin-inline: 0;
+        }
+      }
       .visualTextWrap {
         position: absolute;
         z-index: 1;
@@ -171,6 +188,9 @@
       padding-top: 190px;
       @include mq-down(md) {
         padding-top: 160px;
+      }
+      .wave {
+        transform: translateY(-50px);
       }
       .inner {
         display: flex;

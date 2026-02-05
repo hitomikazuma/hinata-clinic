@@ -115,6 +115,13 @@
     <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_4.png')); ?>" width="48px" height="72px" alt="footer illust">
     <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_5.png')); ?>" width="37px" height="64px" alt="footer illust">
   </div>
+  <div class="wave wave-footer wave--bottom" aria-hidden="true">
+    <svg class="waveSvg" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+      <g class="waveLayer">
+        <use class="waveUse" href="#waveShape" />
+      </g>
+    </svg>
+  </div>
 </footer>
 
 <?php wp_footer(); ?>

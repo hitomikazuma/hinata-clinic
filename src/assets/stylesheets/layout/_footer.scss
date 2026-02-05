@@ -1,6 +1,7 @@
 @use '../settings/index' as *;
 
 .footer {
+  position: relative;
   padding-block: 100px;
   background: #e4f1f5;
   @include mq-down(md) {
