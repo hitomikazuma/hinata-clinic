@@ -109,11 +109,18 @@
     </p>
   </div>
   <div class="footerIllust">
-    <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_1.png')); ?>" width="214px" height="118px" alt="footer illust">
-    <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_2.png')); ?>" width="222px" height="114px" alt="footer illust">
-    <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_3.png')); ?>" width="239px" height="125px" alt="footer illust">
-    <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_4.png')); ?>" width="48px" height="72px" alt="footer illust">
-    <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_5.png')); ?>" width="37px" height="64px" alt="footer illust">
+    <div class="isDesktopFlex">
+      <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_1.png')); ?>" width="214px" height="118px" alt="footer illust">
+      <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_2.png')); ?>" width="222px" height="114px" alt="footer illust">
+      <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_3.png')); ?>" width="239px" height="125px" alt="footer illust">
+      <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_4.png')); ?>" width="48px" height="72px" alt="footer illust">
+      <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_5.png')); ?>" width="37px" height="64px" alt="footer illust">
+    </div>
+    <div class="isMobileFlex">
+      <img src="<?php echo esc_url(get_theme_file_uri('images/footer/illust_mobile.png')); ?>" width="671px" height="171™¡™px" alt="footer illust">
+    </div>
+  </div>
+
   </div>
   <div class="wave wave-footer wave--bottom" aria-hidden="true">
     <svg class="waveSvg" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">

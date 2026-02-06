@@ -94,6 +94,15 @@ $waveThemeCustomProps: (
   }
 }
 
+// スマホ時のnews waveの高さを画面半分に
+.wave-news {
+  @include mq-down(md) {
+    --waveHeight: 50vh;
+    --waveOffsetTop: 0;
+    --waveTranslateY: -56%;
+  }
+}
+
 .waveDefs {
   position: absolute;
   width: 0;
@@ -123,7 +132,7 @@ $waveThemeCustomProps: (
     display: block;
     width: 100%;
     height: var(--waveHeight, clamp(64px, 12vw, 180px));
-    transform: scaleY(var(--waveAmp, 1));
+    transform: translateY(var(--waveTranslateY, 0)) scaleY(var(--waveAmp, 1));
     transform-origin: 50% 50%;
     backface-visibility: hidden;
   }

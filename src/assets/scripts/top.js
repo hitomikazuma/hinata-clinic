@@ -16,7 +16,7 @@ function initVisualSwiper() {
     modules: [Autoplay],
     centeredSlides: true,
     slidesPerView: 'auto',
-    spaceBetween: 85,
+    spaceBetween: 10,
     loop: true,
     speed: 800,
     grabCursor: true,
@@ -27,6 +27,12 @@ function initVisualSwiper() {
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         },
+    breakpoints: {
+      // md (768px) 以上
+      768: {
+        spaceBetween: 85,
+      },
+    },
   })
 }
 

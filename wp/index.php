@@ -58,11 +58,17 @@
         </div>
       </div>
     </div>
-
+    <img class="visualIllustCloud isMobile" src="<?php echo esc_url(get_theme_file_uri('images/top/visual_illust_mobile_1.png')); ?>" width="180px" height="118px" alt="">
     <div class="visualIllustration">
       <div class="isDesktopFlex">
+        <img src="<?php echo esc_url(get_theme_file_uri('images/top/visual_illust_desktop_1.png')); ?>" width="351px" height="158px" alt="">
+        <img src="<?php echo esc_url(get_theme_file_uri('images/top/visual_illust_desktop_2.png')); ?>" width="96px" height="81px" alt="">
+        <img src="<?php echo esc_url(get_theme_file_uri('images/top/visual_illust_desktop_3.png')); ?>" width="263px" height="220px" alt="">
+        <img src="<?php echo esc_url(get_theme_file_uri('images/top/visual_illust_desktop_4.png')); ?>" width="37px" height="63px" alt="">
       </div>
-      <div class="isMobileFlex"></div>
+      <div class="isMobileFlex">
+        <img src="<?php echo esc_url(get_theme_file_uri('images/top/visual_illust_mobile_2.png')); ?>" width="654px" height="218px" alt="">
+      </div>
     </div>
     <div class="wave wave-visual wave--bottom" aria-hidden="true">
       <svg class="waveSvg" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
@@ -195,6 +201,14 @@
   </section>
 
   <section class="medicalInformation">
+    <div class="medicalInformationIllustration">
+      <div class="isDesktopFlex">
+        <img src="<?php echo esc_url(get_theme_file_uri('images/top/medicalInformation_illust_desktop.png')); ?>" width="425px" height="196px" alt="">
+      </div>
+      <div class="isMobileFlex">
+        <img src="<?php echo esc_url(get_theme_file_uri('images/top/medicalInformation_illust_mobile.png')); ?>" width="361px" height="189px" alt="">
+      </div>
+    </div>
     <div class="wave wave-medicalInformation" aria-hidden="true">
       <svg class="waveSvg" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
         <g class="waveLayer">
@@ -484,6 +498,14 @@
   </section>
 
   <section class="communityHealthRoom">
+    <div class="communityHealthRoomIllustration">
+      <div class="isDesktopFlex">
+        <img src="<?php echo esc_url(get_theme_file_uri('images/top/communityHealthRoom_illust_desktop.png')); ?>" width="600px" height="229px" alt="">
+      </div>
+      <div class="isMobileFlex">
+        <img src="<?php echo esc_url(get_theme_file_uri('images/top/communityHealthRoom_illust_mobile.png')); ?>" width="653px" height="239px" alt="">
+      </div>
+    </div>
     <div class="wave wave-communityHealthRoom" aria-hidden="true">
       <svg class="waveSvg" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
         <g class="waveLayer">
