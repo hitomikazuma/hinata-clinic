@@ -123,11 +123,21 @@
   z-index: 1;
   background: #f2f5f6;
   height: var(--header-height);
+  @include mq-down(md) {
+   position: fixed;
+   z-index: 10;
+   top: 0;
+   left: 0;
+   width: 100%;
+  }
   .headerInner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-right: 50px;
+    @include mq-down(md) {
+      padding-right: 20px;
+    }
   }
   .headerLogoArea {
     position: relative;
@@ -166,30 +176,166 @@
       }
     }
   }
+  .headerMenuButton {
+    display: none;
+    @include mq-down(md) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      background: white;
+      border-radius: 20px;
+    }
+  }
+  .headerMenuButtonLine {
+    display: block;
+    width: 27px;
+    height: 1px;
+    background: var(--primary-color);
+    border-radius: 2.5px;
+    &:last-of-type {
+      margin-top: 5px;
+    }
+  }
+  .headerMenuButtonText {
+    margin-top: 8px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+        font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: var(--secondary-color);
+  }
   .headerInfoArea {
     display: flex;
     align-items: center;
     @include mq-down(md) {
-      display: none;
+      // display: none;
+      position: absolute;
+      z-index: 5;
+      top: 100%;
+      left: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 10px;
+      width: 100%;
+      height: calc(100vh - var(--header-height));
+      padding-top: 50px;
+      padding-inline: calc(var(--base-padding-inline) * 3);
+      background: #f2f5f6;
     }
   }
   .headerNav {
     margin-right: 30px;
     padding-right: 30px;
     border-right: 1px dashed var(--primary-color-transparency);
+    @include mq-down(md) {
+      width: 100%;
+     margin-right: 0;
+      padding-right: 0;
+      border-right: none;
+      border-bottom: 1px dashed var(--primary-color-transparency);
+    }
   }
   .headerNavList {
     display: flex;
     column-gap: 30px;
+    @include mq-down(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      column-gap: 0;
+      width: 100%;
+    }
     &:last-child {
       margin-top: 15px;
+      @include mq-down(md) {
+        margin-top: 0;
+      }
     }
   }
   .headerNavItem {
-    a {
+    @include mq-down(md) {
+      width: 100%;
+    }
+    a:not(.headerNavSubLink),
+    button {
       letter-spacing: 0.1em;
       font-size: 15px;
       font-weight: 600;
+      @include mq-down(md) {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-block: 20px;
+        padding-left: 15px;
+        font-size: 16px;
+        border-top: 1px dashed var(--primary-color-transparency); 
+      }
+      &::before {
+        @include mq-down(md) {
+        content: '';
+        position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          width: 6px;
+          height: 6px;
+          background: var(--secondary-color);
+          border-radius: 50%;
+        }
+      }
+      svg {
+        display: none;
+        @include mq-down(md) {
+          display: block;
+          width: 10px;
+          height: 10px;
+          transform: translateX(-10px);
+        }
+      }
+    }
+  }
+  .headerNavParent {
+    @include mq-down(md) {
+      display: flex;
+       justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  }
+  .headerNavSub {
+    @include mq-down(md) {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 20px;
+      background: white;
+      border-radius: 20px;
+    }
+  }
+  .headerNavSubItem {
+    @include mq-down(md) {
+      width: 100%;
+      line-height: 1;
+    }
+    &:not(:first-child) {
+      @include mq-down(md) {
+        margin-top: 15px;
+      }
+    }
+  }
+  .headerNavSubLink {
+    @include mq-down(md) {
+      display: block;
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+  .headerInfo {
+    @include mq-down(md) {
+   margin-top: 30px;
     }
   }
   .headerTime {
@@ -197,10 +343,16 @@
     align-items: center;
     column-gap: 30px;
     margin-top: 20px;
+    @include mq-down(md) {
+      display: none;
+    }
   }
   .headerTimeText {
     font-size: 12px;
     font-weight: 600;
     color: var(--primary-color);
+    @include mq-down(md) {
+     display: none;
+    }
   }
 }

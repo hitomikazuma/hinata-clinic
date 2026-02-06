@@ -80,28 +80,118 @@
           <img src="<?php echo esc_url(get_theme_file_uri('images/logo.png')); ?>" alt="Hinata Clinic">
         </h1>
       </div>
+      <button class="headerMenuButton">
+        <div>
+          <span class="headerMenuButtonLine"></span>
+          <span class="headerMenuButtonLine"></span>
+        </div>
+        <span class="headerMenuButtonText">Menu</span>
+      </button>
       <div class="headerInfoArea">
         <nav class="headerNav">
           <ul class="headerNavList">
             <li class="headerNavItem">
-              <a href="#">当院について</a>
+              <a href="#">
+                当院について
+                <svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="20px" height="20px" viewBox="0 0 20 20">
+<path fill-rule="evenodd"  stroke-width="2px" stroke="rgb(11, 158, 206)" fill="rgb(11, 158, 206)"
+ d="M15.182,10.014 L4.819,4.816 L4.819,15.212 L15.182,10.014 Z"/>
+</svg>
+              </a>
             </li>
             <li class="headerNavItem">
-              <a href="#">診療案内</a>
+            <a class="isDesktop" href="#">診療案内</a>
+              <button class="isMobile" type="button">
+                <div class="headerNavParent">
+                診療案内
+                <svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="23px" height="23px" viewBox="0 0 23 23">
+<text kerning="auto" font-family="Kozuka Gothic Pr6N" fill="rgb(0, 0, 0)" transform="matrix( 1.755, 0, 0, 1.75499988913536,3.42875500000002, 19.6791769833153)" font-size="16px"><tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#43;</tspan></text>
+<text kerning="auto" font-family="Kozuka Gothic Pr6N" stroke-width="1px" stroke="rgb(11, 158, 206)" fill-opacity="0" stroke-opacity="1" transform="matrix( 1.755, 0, 0, 1.75499988913536,3.42875500000002, 19.6791769833153)" font-size="16px"><tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#43;</tspan></text>
+</svg>
+                </div>
+              </button>
+              <div class="headerNavSub">
+                  <p class="headerNavSubItem">
+                    <a class="headerNavSubLink" href="#">一般内科</a>
+                  </p>
+                  <p class="headerNavSubItem">
+                    <a class="headerNavSubLink" href="#">小児科</a>
+                  </p>
+                  <p class="headerNavSubItem">
+                    <a class="headerNavSubLink" href="#">外科・整形外科</a>
+                  </p>
+                  <p class="headerNavSubItem">
+                    <a class="headerNavSubLink" href="#">在宅医療</a>
+                  </p>
+                </div>
             </li>
             <li class="headerNavItem">
-              <a href="#">予防医療</a>
+              <a class="isDesktop" href="#">予防医療</a>
+              <button class="isMobile" type="button">
+                <div class="headerNavParent">
+                予防医療
+                <svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="23px" height="23px" viewBox="0 0 23 23">
+<text kerning="auto" font-family="Kozuka Gothic Pr6N" fill="rgb(0, 0, 0)" transform="matrix( 1.755, 0, 0, 1.75499988913536,3.42875500000002, 19.6791769833153)" font-size="16px"><tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#43;</tspan></text>
+<text kerning="auto" font-family="Kozuka Gothic Pr6N" stroke-width="1px" stroke="rgb(11, 158, 206)" fill-opacity="0" stroke-opacity="1" transform="matrix( 1.755, 0, 0, 1.75499988913536,3.42875500000002, 19.6791769833153)" font-size="16px"><tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#43;</tspan></text>
+</svg>
+                </div>
+              </button>
+              <div class="headerNavSub">
+                <p class="headerNavSubItem">
+                  <a class="headerNavSubLink" href="#">予防接種・ワクチン</a>
+                </p>
+                <p class="headerNavSubItem">
+                  <a class="headerNavSubLink" href="#">健康診断</a>
+                </p>
+              </div>
+              </button>
             </li>
           </ul>
           <ul class="headerNavList">
             <li class="headerNavItem">
-              <a href="#">診療時間・アクセス</a>
+              <a href="#">
+                診療時間・アクセス
+                <svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="20px" height="20px" viewBox="0 0 20 20">
+<path fill-rule="evenodd"  stroke-width="2px" stroke="rgb(11, 158, 206)" fill="rgb(11, 158, 206)"
+ d="M15.182,10.014 L4.819,4.816 L4.819,15.212 L15.182,10.014 Z"/>
+</svg>
+              </a>
             </li>
             <li class="headerNavItem">
-              <a href="#">ボランティア募集</a>
+              <a href="#">
+                ボランティア募集
+                <svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="20px" height="20px" viewBox="0 0 20 20">
+<path fill-rule="evenodd"  stroke-width="2px" stroke="rgb(11, 158, 206)" fill="rgb(11, 158, 206)"
+ d="M15.182,10.014 L4.819,4.816 L4.819,15.212 L15.182,10.014 Z"/>
+</svg>
+              </a>
             </li>
             <li class="headerNavItem">
-              <a href="#">お知らせ</a>
+              <a href="#">
+                お知らせ
+                <svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="20px" height="20px" viewBox="0 0 20 20">
+<path fill-rule="evenodd"  stroke-width="2px" stroke="rgb(11, 158, 206)" fill="rgb(11, 158, 206)"
+ d="M15.182,10.014 L4.819,4.816 L4.819,15.212 L15.182,10.014 Z"/>
+</svg>
+              </a>
             </li>
           </ul>
         </nav>
