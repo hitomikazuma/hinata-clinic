@@ -93,56 +93,90 @@
             <li class="headerNavItem">
               <a href="#">
                 当院について
-                <svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="20px" height="20px" viewBox="0 0 20 20">
-<path fill-rule="evenodd"  stroke-width="2px" stroke="rgb(11, 158, 206)" fill="rgb(11, 158, 206)"
- d="M15.182,10.014 L4.819,4.816 L4.819,15.212 L15.182,10.014 Z"/>
-</svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="20px" height="20px" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" stroke-width="2px" stroke="rgb(11, 158, 206)" fill="rgb(11, 158, 206)"
+                    d="M15.182,10.014 L4.819,4.816 L4.819,15.212 L15.182,10.014 Z" />
+                </svg>
               </a>
             </li>
             <li class="headerNavItem">
-            <a class="isDesktop" href="#">診療案内</a>
-              <button class="isMobile" type="button">
+              <a class="isDesktop" href="#">診療案内</a>
+              <button class="headerNavButton" type="button">
                 <div class="headerNavParent">
-                診療案内
-                <svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="23px" height="23px" viewBox="0 0 23 23">
-<text kerning="auto" font-family="Kozuka Gothic Pr6N" fill="rgb(0, 0, 0)" transform="matrix( 1.755, 0, 0, 1.75499988913536,3.42875500000002, 19.6791769833153)" font-size="16px"><tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#43;</tspan></text>
-<text kerning="auto" font-family="Kozuka Gothic Pr6N" stroke-width="1px" stroke="rgb(11, 158, 206)" fill-opacity="0" stroke-opacity="1" transform="matrix( 1.755, 0, 0, 1.75499988913536,3.42875500000002, 19.6791769833153)" font-size="16px"><tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#43;</tspan></text>
-</svg>
+                  診療案内
+                  <svg
+                    class="headerNavButtonIcon isClosed"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="23px" height="23px" viewBox="0 0 23 23">
+                    <text kerning="auto" font-family="Kozuka Gothic Pr6N" fill="rgb(0, 0, 0)" transform="matrix( 1.755, 0, 0, 1.75499988913536,3.42875500000002, 19.6791769833153)" font-size="16px">
+                      <tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#43;</tspan>
+                    </text>
+                    <text kerning="auto" font-family="Kozuka Gothic Pr6N" stroke-width="1px" stroke="rgb(11, 158, 206)" fill-opacity="0" stroke-opacity="1" transform="matrix( 1.755, 0, 0, 1.75499988913536,3.42875500000002, 19.6791769833153)" font-size="16px">
+                      <tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#43;</tspan>
+                    </text>
+                  </svg>
+                  <svg
+                    class="headerNavButtonIcon isOpen"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="21px" height="10px" viewBox="0 0 21 10">
+                    <text kerning="auto" font-family="Kozuka Gothic Pr6N" fill="rgb(0, 0, 0)" transform="matrix( 1.755, 0, 0, 1.75499988913536,4.63127999999995, 12.8966220011646)" font-size="16px">
+                      <tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#45;</tspan>
+                    </text>
+                    <text kerning="auto" font-family="Kozuka Gothic Pr6N" stroke-width="2px" stroke="rgb(11, 158, 206)" fill-opacity="0" stroke-opacity="1" transform="matrix( 1.755, 0, 0, 1.75499988913536,4.63127999999995, 12.8966220011646)" font-size="16px">
+                      <tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#45;</tspan>
+                    </text>
+                  </svg>
                 </div>
               </button>
               <div class="headerNavSub">
-                  <p class="headerNavSubItem">
-                    <a class="headerNavSubLink" href="#">一般内科</a>
-                  </p>
-                  <p class="headerNavSubItem">
-                    <a class="headerNavSubLink" href="#">小児科</a>
-                  </p>
-                  <p class="headerNavSubItem">
-                    <a class="headerNavSubLink" href="#">外科・整形外科</a>
-                  </p>
-                  <p class="headerNavSubItem">
-                    <a class="headerNavSubLink" href="#">在宅医療</a>
-                  </p>
-                </div>
+                <p class="headerNavSubItem">
+                  <a class="headerNavSubLink" href="#">一般内科</a>
+                </p>
+                <p class="headerNavSubItem">
+                  <a class="headerNavSubLink" href="#">小児科</a>
+                </p>
+                <p class="headerNavSubItem">
+                  <a class="headerNavSubLink" href="#">外科・整形外科</a>
+                </p>
+                <p class="headerNavSubItem">
+                  <a class="headerNavSubLink" href="#">在宅医療</a>
+                </p>
+              </div>
             </li>
             <li class="headerNavItem">
               <a class="isDesktop" href="#">予防医療</a>
-              <button class="isMobile" type="button">
+              <button class="headerNavButton" type="button">
                 <div class="headerNavParent">
-                予防医療
-                <svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="23px" height="23px" viewBox="0 0 23 23">
-<text kerning="auto" font-family="Kozuka Gothic Pr6N" fill="rgb(0, 0, 0)" transform="matrix( 1.755, 0, 0, 1.75499988913536,3.42875500000002, 19.6791769833153)" font-size="16px"><tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#43;</tspan></text>
-<text kerning="auto" font-family="Kozuka Gothic Pr6N" stroke-width="1px" stroke="rgb(11, 158, 206)" fill-opacity="0" stroke-opacity="1" transform="matrix( 1.755, 0, 0, 1.75499988913536,3.42875500000002, 19.6791769833153)" font-size="16px"><tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#43;</tspan></text>
-</svg>
+                  予防医療
+                  <svg
+                    class="headerNavButtonIcon isClosed"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="23px" height="23px" viewBox="0 0 23 23">
+                    <text kerning="auto" font-family="Kozuka Gothic Pr6N" fill="rgb(0, 0, 0)" transform="matrix( 1.755, 0, 0, 1.75499988913536,3.42875500000002, 19.6791769833153)" font-size="16px">
+                      <tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#43;</tspan>
+                    </text>
+                    <text kerning="auto" font-family="Kozuka Gothic Pr6N" stroke-width="1px" stroke="rgb(11, 158, 206)" fill-opacity="0" stroke-opacity="1" transform="matrix( 1.755, 0, 0, 1.75499988913536,3.42875500000002, 19.6791769833153)" font-size="16px">
+                      <tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#43;</tspan>
+                    </text>
+                  </svg>
+                  <svg
+                    class="headerNavButtonIcon isOpen"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="21px" height="10px" viewBox="0 0 21 10">
+                    <text kerning="auto" font-family="Kozuka Gothic Pr6N" fill="rgb(0, 0, 0)" transform="matrix( 1.755, 0, 0, 1.75499988913536,4.63127999999995, 12.8966220011646)" font-size="16px">
+                      <tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#45;</tspan>
+                    </text>
+                    <text kerning="auto" font-family="Kozuka Gothic Pr6N" stroke-width="2px" stroke="rgb(11, 158, 206)" fill-opacity="0" stroke-opacity="1" transform="matrix( 1.755, 0, 0, 1.75499988913536,4.63127999999995, 12.8966220011646)" font-size="16px">
+                      <tspan font-size="16px" font-family="ShueiMGoStd" fill="#0B9ECE">&#45;</tspan>
+                    </text>
+                  </svg>
                 </div>
               </button>
               <div class="headerNavSub">
@@ -153,44 +187,43 @@
                   <a class="headerNavSubLink" href="#">健康診断</a>
                 </p>
               </div>
-              </button>
             </li>
           </ul>
           <ul class="headerNavList">
             <li class="headerNavItem">
               <a href="#">
                 診療時間・アクセス
-                <svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="20px" height="20px" viewBox="0 0 20 20">
-<path fill-rule="evenodd"  stroke-width="2px" stroke="rgb(11, 158, 206)" fill="rgb(11, 158, 206)"
- d="M15.182,10.014 L4.819,4.816 L4.819,15.212 L15.182,10.014 Z"/>
-</svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="20px" height="20px" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" stroke-width="2px" stroke="rgb(11, 158, 206)" fill="rgb(11, 158, 206)"
+                    d="M15.182,10.014 L4.819,4.816 L4.819,15.212 L15.182,10.014 Z" />
+                </svg>
               </a>
             </li>
             <li class="headerNavItem">
               <a href="#">
                 ボランティア募集
-                <svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="20px" height="20px" viewBox="0 0 20 20">
-<path fill-rule="evenodd"  stroke-width="2px" stroke="rgb(11, 158, 206)" fill="rgb(11, 158, 206)"
- d="M15.182,10.014 L4.819,4.816 L4.819,15.212 L15.182,10.014 Z"/>
-</svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="20px" height="20px" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" stroke-width="2px" stroke="rgb(11, 158, 206)" fill="rgb(11, 158, 206)"
+                    d="M15.182,10.014 L4.819,4.816 L4.819,15.212 L15.182,10.014 Z" />
+                </svg>
               </a>
             </li>
             <li class="headerNavItem">
               <a href="#">
                 お知らせ
-                <svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="20px" height="20px" viewBox="0 0 20 20">
-<path fill-rule="evenodd"  stroke-width="2px" stroke="rgb(11, 158, 206)" fill="rgb(11, 158, 206)"
- d="M15.182,10.014 L4.819,4.816 L4.819,15.212 L15.182,10.014 Z"/>
-</svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="20px" height="20px" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" stroke-width="2px" stroke="rgb(11, 158, 206)" fill="rgb(11, 158, 206)"
+                    d="M15.182,10.014 L4.819,4.816 L4.819,15.212 L15.182,10.014 Z" />
+                </svg>
               </a>
             </li>
           </ul>

@@ -124,11 +124,11 @@
   background: #f2f5f6;
   height: var(--header-height);
   @include mq-down(md) {
-   position: fixed;
-   z-index: 10;
-   top: 0;
-   left: 0;
-   width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
   .headerInner {
     display: flex;
@@ -195,15 +195,27 @@
     height: 1px;
     background: var(--primary-color);
     border-radius: 2.5px;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
     &:last-of-type {
       margin-top: 5px;
+    }
+  }
+  &.isMenuOpen .headerMenuButtonLine {
+    &:first-of-type {
+      transform: translateY(3px) rotate(25deg);
+    }
+    &:last-of-type {
+      margin-top: 0;
+      transform: translateY(-3px) rotate(-25deg);
     }
   }
   .headerMenuButtonText {
     margin-top: 8px;
     line-height: 1;
     letter-spacing: 0.1em;
-        font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     color: var(--secondary-color);
   }
@@ -211,7 +223,9 @@
     display: flex;
     align-items: center;
     @include mq-down(md) {
-      // display: none;
+      visibility: hidden;
+      opacity: 0;
+      overflow-y: auto;
       position: absolute;
       z-index: 5;
       top: 100%;
@@ -224,6 +238,15 @@
       padding-top: 50px;
       padding-inline: calc(var(--base-padding-inline) * 3);
       background: #f2f5f6;
+      transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+    }
+  }
+  &.isMenuOpen .headerInfoArea {
+    @include mq-down(md) {
+      visibility: visible;
+      opacity: 1;
     }
   }
   .headerNav {
@@ -231,8 +254,9 @@
     padding-right: 30px;
     border-right: 1px dashed var(--primary-color-transparency);
     @include mq-down(md) {
+      overflow-y: auto;
       width: 100%;
-     margin-right: 0;
+      margin-right: 0;
       padding-right: 0;
       border-right: none;
       border-bottom: 1px dashed var(--primary-color-transparency);
@@ -272,12 +296,12 @@
         padding-block: 20px;
         padding-left: 15px;
         font-size: 16px;
-        border-top: 1px dashed var(--primary-color-transparency); 
+        border-top: 1px dashed var(--primary-color-transparency);
       }
       &::before {
         @include mq-down(md) {
-        content: '';
-        position: absolute;
+          content: '';
+          position: absolute;
           top: 50%;
           left: 0;
           transform: translateY(-50%);
@@ -298,16 +322,40 @@
       }
     }
   }
+  .headerNavButton {
+    display: none;
+    @include mq-down(md) {
+      display: block;
+    }
+  }
+  .headerNavItem {
+    .headerNavButtonIcon.isClosed {
+      display: inline;
+    }
+    .headerNavButtonIcon.isOpen {
+      display: none;
+    }
+    &.isOpen {
+      .headerNavButtonIcon.isClosed {
+        display: none;
+      }
+      .headerNavButtonIcon.isOpen {
+        display: inline;
+      }
+    }
+  }
   .headerNavParent {
     @include mq-down(md) {
       display: flex;
-       justify-content: space-between;
+      justify-content: space-between;
       align-items: center;
       width: 100%;
     }
   }
   .headerNavSub {
+    display: none;
     @include mq-down(md) {
+      display: none;
       width: 100%;
       margin-bottom: 20px;
       padding: 20px;
@@ -335,7 +383,7 @@
   }
   .headerInfo {
     @include mq-down(md) {
-   margin-top: 30px;
+      margin-top: 30px;
     }
   }
   .headerTime {
@@ -352,7 +400,7 @@
     font-weight: 600;
     color: var(--primary-color);
     @include mq-down(md) {
-     display: none;
+      display: none;
     }
   }
 }
